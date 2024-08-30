@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+html, body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar, .footer {
+    width: 100%;
+    background-color: #1B2653; 
+    color: #fff;
+    padding: 1rem 0; 
+}
+
+.footer {
+    background-color: #1B2653;
+    color: white; 
+    padding: 1rem 0; 
+}
+
+.footer .row {
+    align-items: center; 
+}
+
+.footer h6 {
+    margin-bottom: 0;
+}
+
+.container {
+    max-width: 90%;
+}
+
+a{
+    color: inherit; 
+    text-decoration: none; 
+}
+
+.menu{
+    background-color: #1B2653;
+    color: white;
+    width: 100%;
+}
+
+.custom-btn-outline{ 
+    border-radius: 16px;
+
+}
+
+.img_pack {
+    position: relative; 
+    display: inline-block; 
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+
+.img_pack .desfocada {
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    filter: blur(2px); 
+    z-index: 1; 
+}
+
+.img_pack .focada {
+    position: relative; 
+    z-index: 2; 
+    width: 75%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+.aparecer{
+    text-decoration: underline; 
+    color: #FE6613;
+}
+
+.btn-primary {
+    background-color: #FE6613; 
+    border-color: #FE6613;   
+}
+
+.btn-close{
+    background-color: #FE6613; 
+    border-color: #FE6613;   
+}
+
+.form-row {
+    display: flex;
+    gap: 10%; 
+}
+
+.form-row input {
+    flex: 1;
+}
+
+.borda{
+    border-color: #FE6613;   
+}
+
+.modal-body img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
+  }
+  
+  .retangulo_container {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%); 
+    text-align: center; 
+    width: 80%; 
+  }
+  
+  .retangulo_texto {
+    color: #fff; 
+    margin: 0;
+  }
+  
+  .retangulo {
+    background-color: #FE6613;
+    border-radius: 5px;
+    color: #fff; 
+  }
+
+  .laranja{
+    overflow: visible;
+    position: relative;
+  }
+
+  
+
+  @keyframes zoom {
+    0% {
+        transform: scale(1.2); 
+    }
+    100% {
+        transform: scale(1.0); 
+    }
+    }
+
+   .overflow{
+    overflow: hidden;
+   }
+
+  .zoom{
+    animation: zoom 8s ease-in-out infinite; 
+    transition: transform 0.5s ease; 
+    width: 100%;
+    height: 100%;
+  }

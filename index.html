@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imóvel Guide</title>
+    <link rel="icon" href="img/minilogo.jpg" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg menu" data-bs-theme="dark" >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="img/logo.jpg" alt="logoimovelguide" width="80%" height="80%"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ">
+              <li class="nav-item ">
+                <a class="nav-link " href="#">Condomínios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="#">Fórum</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Guia</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Artigos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Ferramentas</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Cotar Imóvel</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Planos</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link " href="#">Entrar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-outline-light custom-btn-outline" href="#">Cadastre-se</a>
+                </li>
+              </ul>         
+          </div>
+        </div>
+      </nav>
+
+      <br>
+      <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+               <div class="card">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-4">
+                        <div class="mb-2 img_pack">
+                           <img src="img/pessoa1.jpg" class="img-fluid focada" alt="Corretora 1" >
+                           <img src="img/pessoa1.jpg" class="img-fluid desfocada" alt="Corretora 1">
+                        </div>
+                        <div class=" img_pack">
+                           <img src="img/pessoa2.jpg" class="img-fluid focada" alt="Corretor 2" >
+                           <img src="img/pessoa2.jpg" class="img-fluid desfocada" alt="Corretor 2">
+                        </div>
+                        </div>
+                           <div class="col-8 d-flex flex-column justify-content-around ">
+                              <div>
+                                <h5>Nome Corretora</h5>
+                                <p>3.000 pontos</p>
+                                <a href="#" data-telefone="(11) 96253-6255" class="aparecer">ver telefone</a>
+                                           
+                              </div>
+                              <div>
+                                <h5>Nome Corretor</h5>
+                                <p>1.260 pontos</p>
+                                <a href="#" data-telefone="(11) 93456-7745" class="aparecer">ver telefone</a>
+                              </div>
+                           </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="" onsubmit="return validarForms()">
+                          <h5>Mande uma mensagem</h5>                   
+                          <input class="form-control" type="text" id="cpf" placeholder="Digite seu CPF" maxlength="14" required>
+                          <br>
+                          <input class="form-control" type="text" id="telefone" placeholder="Digite seu telefone" maxlength="15" required>
+                          <br>
+                          <textarea class="form-control" rows="2" placeholder="Digite o assunto" required></textarea>
+                          <br>
+                          <button class="btn btn-primary" type="submit">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <div class="card">
+                  <div class="card-body">
+                    <h5>Regra de 3</h5>
+                    <br><br>
+                    <form action="" onsubmit="calcularRegraDeTres(event)">
+                        <div class="form-row mb-3">
+                            <input class="form-control" type="text" id="valor1" required placeholder="60"> <hr>
+                            <input class="form-control" type="text" id="valor2" required placeholder="100">
+                        </div><br>
+                        <div class="form-row mb-3">
+                            <input class="form-control" type="text" id="valor3" required placeholder="30"> <hr>
+                            <input class="form-control borda" type="text" id="resultado"  placeholder="Resultado"readonly>
+                        </div>
+                        <br>
+                        <button class="btn btn-primary" type="submit">Calcular</button>
+                    </form>
+                </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <div class="card">
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="img/casa.jpg" alt="casa" class="card-img-top">    
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center mt-3">
+                  <button class="btn btn-primary justify-content-center casa" >ABRIR IMAGEM NO MODAL</button>
+                 </div><br>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                 <div class="card laranja" >
+                    <div class=" d-flex flex-column align-items-center position-relative cont">
+                      <div  id="conteudo">
+                        <div class="retangulo_container" >    
+                          <div class="retangulo">
+                            <p class="retangulo_texto">Imóvel Guide</p>
+                          </div>
+                        </div>
+                        <img src="img/casa.jpg" alt="casa" class="card-img-top" >
+                      </div>
+                    </div>
+                 </div>
+                <div class="d-flex justify-content-center mt-3">
+                  <button class="btn btn-primary" id="capture">Download</button>
+                 </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <div class="card overflow">
+                  <div class="d-flex flex-column align-items-center">
+                    <img src="img/casa.jpg" alt="casa" class="card-img-top zoom">
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="telefoneModal" tabindex="-1" aria-labelledby="telefoneModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="telefoneModalLabel">Número do Telefone do(a) Corretor(a)</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body" id="modalTelefoneBody">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="casaModal" tabindex="-1" aria-labelledby="casaModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body">
+              <img src="img/casa.jpg" alt="casaModal">
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 mb-3 mb-md-0">
+            <a href="#">Termos</a>  | 
+            <a href="#">Contatos</a>  | 
+            <a href="#">Sobre</a>
+          </div>
+          <div class="col-12 col-md-6 text-end d-flex align-items-center justify-content-end">
+            <h6 class="mb-0 me-2">© Copyright 2022. Todos os direitos reservados.</h6>
+            <a href="#"><img src="img/logo.jpg" alt="logoimovelguide" width="60%" height="60%"></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.0/dist/html2canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>
