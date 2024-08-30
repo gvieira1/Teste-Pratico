@@ -42,9 +42,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
   
-function validarForms(){
-        alert("Sua mensagem foi enviada! Obrigado por entrar em contato!" );
-}
+  document.getElementById('form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const valor1 = document.getElementById('cpf').value;
+    const valor2 = document.getElementById('telefone').value;
+
+    function validarCampo(valor, maxLength) {
+        return valor.length === maxLength;
+    }
+
+    const maxLength1 = 14;  
+    const maxLength2 = 15;
+
+    if (
+        !validarCampo(valor1, maxLength1) ||
+        !validarCampo(valor2, maxLength2) 
+    ) {
+        alert('Por favor, insira o CPF e o Telefone corretamente!');
+        return;
+    }
+
+    alert('Sua mensagem foi enviada! Obrigado por entrar em contato!');
+});
+
 
 
 function calcularRegraDeTres(event) {
